@@ -68,5 +68,5 @@ melt_dt <- melt(merge_dt,c("actID","actName","subID"))
 dcast_dt <- dcast(melt_dt,actID + actName + subID ~ variable, mean)
 
 #write down the output value to a file.
-write.table(dcast_dt,"./tidy_data.txt")
+write.table(dcast_dt,"./tidy_data.txt",row.name=F)
 
